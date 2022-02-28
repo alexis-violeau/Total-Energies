@@ -3,25 +3,26 @@ from tqdm import tqdm
 
 YEAR_RANGE = range(2012,2022)
 
-def load_vehicule_data(path = 'Data/parc_vp_communes'):
-    """Load existing data on historical automobile parc in France at the communal level
+def load_vp(path = 'data/parc_vp_communes.csv'):
+    """Load existing data on historical automobile fleet in France at the communal level
 
     Args:
-        path (str, optional): path to download data. Defaults to 'Data/parc_vp_communes'.
+        path (str, optional): Path to data. Defaults to 'data/parc_vp_communes'.
         
     Return:
-        pandas.DataFrame : All historical data at the department level
+        pandas.DataFrame : Vehicule historic
     """
     
-    # TODO
-    
-    return 
+    return pd.read_csv(path)
 
-def load_demographic_data(path = 'Data/demographic.xlsx'):
-    """Load demographic data (both historical and projection) of french population at the department level.
+def load_demo(path = 'data/demographic.xlsx'):
+    """Load demographic data of french population at the department/age/year levels.
 
     Args:
-        path (str, optional): Path to data_. Defaults to 'Data/'.
+        path (str, optional): Path to data. Defaults to 'data/demographic.xlsx'.
+        
+    Return:
+        pandas.DataFrame : Demographic historic
     """
     
     df = pd.DataFrame()
