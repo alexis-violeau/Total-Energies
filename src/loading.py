@@ -27,7 +27,7 @@ def load_demographic_data(path = 'Data/demographic.xlsx'):
     df = pd.DataFrame()
     
     for year in tqdm(YEAR_RANGE):
-        df_year = pd.read_excel(path,sheet_name = str(year), index_col = [0,1], header = [0,1])
+        df_year = pd.read_excel(path,sheet_name = str(year),header = [0,1])
         df_year['year'] = year
         df = pd.concat([df,df_year])
     
