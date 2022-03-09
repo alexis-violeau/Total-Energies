@@ -4,8 +4,8 @@ from pyproj import Proj, transform
 
 COLS = ['objetID', 'longueur', 'xD', 'yD', 'xF', 'yF','typeComptageTrafic', 'TMJA', 'ratio_PL' ]
 
-def only_Vosges(df):
-    return df[ df.depPrD == 88 | df.depPrF == 88]
+def only_Vosges(df, dep=88):
+    return df[ df.depPrD == dep | df.depPrF == dep]
 
 def keep_useful_cols(df, cols=COLS):
     return df[cols]
