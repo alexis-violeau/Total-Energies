@@ -34,7 +34,7 @@ def load_demo(path = 'data/demographic.xlsx'):
     
     return df
 
-def load_taffic(path='Data/Données trafic routier open data TMJA2019.xlsx'):
+def load_taffic(path='data/Données trafic routier open data TMJA2019.xlsx'):
     """Load existing data on the average traffic per day
 
     Args:
