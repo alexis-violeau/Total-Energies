@@ -4,9 +4,11 @@ from pyproj import Proj, transform
 
 COLS = ['objetID', 'longueur', 'xD', 'yD', 'xF', 'yF','typeComptageTrafic', 'TMJA', 'ratio_PL' ]
 
+def only_Vosges(df):
+    return df[ df.depPrD == 88 | df.depPrF == 88]
+
 def keep_useful_cols(df, cols=COLS):
     return df[cols]
-
 
 def transform_coordinates(df):
     inProj = Proj(init='epsg:2154')
