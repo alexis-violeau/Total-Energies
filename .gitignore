@@ -3,3 +3,4 @@ data
 .DS_Store
 .ipynb_checkpoints
 Données trafic routier open data TMJA2019.xlsx
+trafic_geo.csv
