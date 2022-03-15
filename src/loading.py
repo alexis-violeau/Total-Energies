@@ -31,6 +31,6 @@ def load_demo(path = 'data/demographic.xlsx'):
         df_year = pd.read_excel(path,sheet_name = str(year),header = [0,1])
         df_year['year'] = year
         df = pd.concat([df,df_year])
-    
+            
     return df
 
